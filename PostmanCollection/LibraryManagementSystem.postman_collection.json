@@ -1,0 +1,518 @@
+{
+	"info": {
+		"_postman_id": "0aff1ad5-13c3-4795-9660-dad7eac5b020",
+		"name": "LibraryManagementSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllBooks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\" : \"Think Like Monk\",\r\n    \"isbn\" : \"97884254245668\",\r\n    \"aFirstName\": \"Jay\",\r\n    \"aLastName\": \"Shetty\",\r\n    \"categoryName\": \"Fiction\",\r\n    \"bookDescription\":\"JAy Shetty an inspirational author\",\r\n    \"language\":\"English\", \r\n    \"published\":\"1998\",\r\n    \"quantity\":\"10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBookById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/book/delete/1004",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"delete",
+						"1004"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateBook",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\" : \"Mans Search for Meaning\",\r\n    \"isbn\" : \"9788425423314\",\r\n    \"aFirstName\": \"Dr. Viktor\",\r\n    \"aLastName\": \"Frankl\",\r\n    \"categoryName\": \"NonFiction\",\r\n    \"bookDescription\":\"Dr. Viktor Emil Frankl was an Austrian neurologist, psychiatrist, philosopher, author, and Holocaust survivor.\",\r\n    \"language\":\"English\", \r\n    \"published\":\"1998\",\r\n    \"quantity\":\"10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/book/update/1003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"update",
+						"1003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBookByCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/category/Romance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"category",
+						"Romance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBookByBookName",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetBookByIsbn",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetNumberOfBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBookByBookId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/bookId/1001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"bookId",
+						"1001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBookByAuthorName",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetIssueBookCount",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetDefaulterBookCount",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "CheckFineByUserId",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "PayFineByUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/issueBooks/payFine/10001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"issueBooks",
+						"payFine",
+						"10001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewRecordByBookId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/issueBooks/viewRecordByBookId/1001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"issueBooks",
+						"viewRecordByBookId",
+						"1001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewRecordByUserId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/issueBooks/viewRecordByUserId/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"issueBooks",
+						"viewRecordByUserId",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewRecordByBookName",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "ViewRecordByUserName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/issueBooks/viewRecordByUserName/akash kambl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"issueBooks",
+						"viewRecordByUserName",
+						"akash kambl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IssueRequestFromUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\" : 1003,\r\n\t\"userId\" : 104\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/issueBooks/issueRequestFromUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"issueBooks",
+						"issueRequestFromUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ApproveRequestByStaff",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"issueBookId\" :10001,\r\n    \"bookId\" : 1002,\r\n    \"userId\" : 101,\r\n    \"staffId\" : 201\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/issueBooks/approveRequestByStaff/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"issueBooks",
+						"approveRequestByStaff",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRequestByStaff",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/issueBooks/deleteRequestByStaff/10001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"issueBooks",
+						"deleteRequestByStaff",
+						"10001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetReturnRequest",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/issueBooks/getReturnRequest/10001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"issueBooks",
+						"getReturnRequest",
+						"10001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ApproveReturnRequestByStaff",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/issueBooks/approveReturnRequestByStaff/10001/202",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"issueBooks",
+						"approveReturnRequestByStaff",
+						"10001",
+						"202"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RejectReturnRequestByStaff",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/issueBooks/rejectReturnRequestByStaff/10001/203",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"issueBooks",
+						"rejectReturnRequestByStaff",
+						"10001",
+						"203"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveQuantityOfBooks",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/removeQuantityOfBooks/1001/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"removeQuantityOfBooks",
+						"1001",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddFineTableRows",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/issueBooks/addFineTableRows/10001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"issueBooks",
+						"addFineTableRows",
+						"10001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

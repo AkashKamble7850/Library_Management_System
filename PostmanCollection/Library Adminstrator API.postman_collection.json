@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "d29f3e5c-8377-446b-b7f1-a7814628be47",
+		"name": "Library Adminstrator API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "Delete Staff Member",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/staff/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"staff",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Staff",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\" : \"Abir\",\r\n    \"lastName\": \"Singh\",\r\n    \"role\" : \"Libraian\",\r\n    \"gender\" : \"Male\",\r\n    \"email\" : \"abir@gamil.com\",\r\n    \"password\" : \"a1234567\",\r\n    \"mobile\" : \"1234457890\",\r\n    \"address\" : \"Mumbai\",\r\n    \"dateOfJoining\" : \"2021-02-18\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/staff/add",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"staff",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get list of Staff",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/staff",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"staff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Staff",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"firstName\": \"Arati\",\r\n    \"lastName\": \"Sahu\",\r\n    \"role\": \"Admin\",\r\n    \"gender\": \"Female\",\r\n    \"email\": \"arti@gamil.com\",\r\n    \"password\": \"aratiSahu\",\r\n    \"mobile\": \"0123456789\",\r\n    \"address\": \"Delhi\",\r\n    \"dateOfJoining\": \"2015-08-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/staff/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"staff",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Salary Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/staff/salary/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"staff",
+								"salary",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Display Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/staff/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"staff",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\" : \"geet\",\r\n    \"lastName\" : \"Mehta\",\r\n    \"email\" : \"geet@gmail.com\",\r\n    \"password\" : \"geethmetha\",\r\n    \"mobile\" : \"1834445692\",\r\n\t\"address\" : \"udaipur\",\r\n\t\"education\" : \"B.ed\",\r\n\t\"intrest\" : \"Danceing\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/signup/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"signup",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sigin As User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"geet@gmail.com\",\r\n    \"password\": \"geethmetha\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/signin/user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"signin",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sigin As Staff",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"arti@gamil.com\",\r\n    \"password\": \"aratiSahu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/signin/staff",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"signin",
+								"staff"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "default"
+		}
+	]
+}

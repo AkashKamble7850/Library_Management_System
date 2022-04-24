@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "c8a9cb61-dc1d-41e2-8ba1-caf081b32692",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "GetAllOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/orders",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddOrder/ORDERBOOK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"bookName\":\"Circle\",\r\n\"aFirstName\": \"desh\",\r\n\"quantity\":\"69\",\r\n\"language\":\"Marathi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/vendor/orders/add/401",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vendor",
+								"orders",
+								"add",
+								"401"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditOrder",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"bookName\":\"Square\",\r\n\"aFirstName\": \"Desh\",\r\n\"quantity\":\"96\",\r\n\"language\":\"English\",\r\n\"vendorId\":444\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/orders/804",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"orders",
+								"804"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOrder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/orders/803",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"orders",
+								"803"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendor",
+			"item": [
+				{
+					"name": "GetAllVendor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/vendor",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddVendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"vendorName\":\"vendor3\",\r\n\"vendorAddress\": \"Pune\",\r\n\"vendorContact\":\"99554433221\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/vendor/add/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vendor",
+								"add",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditVendor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"vendorName\":\"EditedV\",\r\n\"vendorAddress\": \"EditedA\",\r\n\"vendorContact\":\"99554433221\",\r\n            \"category\": {\r\n                \"categoryId\": 2,\r\n                \"categoryName\": \"Ugach\"\r\n            }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/vendor/402",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vendor",
+								"402"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteVendor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/vendor/404",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vendor",
+								"404"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "AddStaff",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/library/staff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"library",
+								"staff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddStaff",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"FirstName\" : \"Rohit\",\r\n\"LastName\":\"Sharma\",\r\n\"Role\": \"Librarian\",\r\n\"Gender\":\"Male\",\r\n\"Email\":\"rohit@gmail.com\", \r\n\"Password\":\"rohit\",\r\n\"Mobile\":\"98765432\",\r\n\"Address\":\"Nagpur\",\r\n\"DateOfJoining\":\"2021-02-18\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/library/staff/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"library",
+								"staff",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
