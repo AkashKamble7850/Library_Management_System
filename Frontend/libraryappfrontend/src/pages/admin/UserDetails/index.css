@@ -1,0 +1,12 @@
+.container-fluid{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    background: rgba(189, 192, 195, 0.169); 
+    /*opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1; */
+  }

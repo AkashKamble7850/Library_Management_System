@@ -1,0 +1,23 @@
+.Vision{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: palegoldenrod;
+    position: static;
+    border-radius: 15px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .Mission{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: powderblue;
+    position: static;
+    border-radius: 15px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+
